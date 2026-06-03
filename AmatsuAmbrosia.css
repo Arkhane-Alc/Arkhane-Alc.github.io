@@ -1,0 +1,740 @@
+
+/* FONT (From Google Fonts) */
+
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+
+/*variables*/
+:root {
+    --fc1: #00000;
+    --fc2: #Ffffff;
+    --fc3: #ffffff;
+    --eventText: #006600;
+    --mainFont: 'Newsreader', 'Times New Roman', Times, serif;
+    --headFont: 'Newsreader', 'Times New Roman', Times, serif;
+    --bgColor: rgba(51, 40, 31, .7);
+    --pc1: rgba(235, 174, 226, .8);
+    --pc2: rgba(235, 174, 226, .8);
+    --pc3: rgba(225, 193, 210, .7);
+    --pc4: rgba(87, 23, 25, .9);
+    --sc1: rgba(204, 180, 222, .9);
+    --sc2: rgba(217, 160, 168, .9);
+    --sc3: rgba(204, 180, 222, .7);
+    --sc4: rgba(204, 180, 222, .9);
+    --tc: #b2a999;
+    --borderColor: #FFCCD3;
+    --redAlert: rgba(235, 131, 220, .7);
+    --redLink: #201313;
+    --greenAlert: #8fbc8f;
+    --greenLink: #132013;
+    --yellowAlert: #bcb18f;
+    --yellowLink: #201d13;
+    --button1: #91846e;
+    --button2: #9c917c;
+    --button3: #a79d8b;
+    --button4: #b2a999;
+    --button5: #bdb5a8;
+    --button6: #c8c2b6;
+    --buttonText: #000000;
+    --redButton1: #0f0b0b;
+    --redButton2: #1d1616;
+    --redButton3: #2c2121;
+    --redButton4: #3b2b2b;
+    --redButton5: #493636;
+    --redButton6: #584141;
+    --redButtonText: #ffffff;
+}
+
+/* BACKGROUND */
+
+body {
+	background: url('https://i.imgur.com/bHNFhKN.jpeg') center center fixed;
+	background-size: 100%;
+	font-family: Hedvig Letters Serif, serif;
+
+	color: var(--fc3)
+}
+
+
+
+/*COMMENT BOX*/
+/*Before Box*/
+#commentBox::before {
+    content: " Comments <3";background: #CCB4DE;color: #ffffff;font-weight: 700;width: 100%;height: 40px;display: block;padding-top: 10px !important;
+}
+/*Box*/
+#commentBox {
+    background: rgba(235, 174, 226, .2);border: 3px double var(--borderColor) !important;background-attachment: fixed;background-size: cover;
+}
+/*Comments*/
+div.comment {
+    background: var(--pc2) !important;border-bottom: 1px dotted var(--borderColor);color: var(--fc3);
+}
+/*Post Comment*/
+div#makeComment {
+    background: var(--pc1) !important;border: 3px var(--borderColor) double;border-radius: 5px;
+}
+/*Post Comment Text*/
+input#comment {
+   var(--fc3) !important;color: var(--fc3) !important;text-align: center;
+}
+/*Dates*/
+small.text-muted {
+    color: #FFFFFF;
+}
+small.text-muted a {
+    color: #FFFFFF;
+}
+/*Delete Comment*/
+input[type="button"].bad {
+    background: var(--sc4)!important;
+}
+
+/* MAIN PANEL */
+
+/* RIGHT SIDE */
+.container.main {
+	background: var(--bgColor);
+	border: none;
+	box-shadow: none;
+	border-radius: 10px
+}
+
+/* LEFT SIDE */
+.col-md-9 {
+	background: none;
+        border-right: none
+}
+
+/* TOPBAR ("Welcome back, ___") */
+
+.topbar {
+	background: var(--pc1);
+	border: 2px dotted var(--borderColor);
+	border-top: none;
+	color: var(--fc2);
+	border-radius: 10px;
+}
+
+/* NAVBAR (Den/Crossroads/Etc.) */
+
+.navbar {
+	background: var(--pc2);
+border: 2px dotted var(--borderColor);
+	color: var(--fc2);
+	border-radius: 10px
+}
+
+/* NAVBAR BUTTON TEXT COLOR */
+
+.navbar li a {
+	color: #ffffff !important
+}
+
+/* NAVBAR BUTTON HOVER */
+
+.navbar li a:hover {
+	background: rgba(254, 235, 231, 0.5) !important;
+	border-bottom: none;
+	color: #000000 !important;
+	border-radius: 0px
+}
+
+/* BREADCRUMB (Home / Den) */
+
+.breadcrumb {
+	background: var(--pc3) !important;
+        border: 2px dotted var(--borderColor);
+	border-radius: 10px
+}
+
+/* BREADCRUMB TEXT */
+
+.breadcrumb .active {
+	color: var(--fc1)
+}
+
+/* CSS CREDIT */
+
+.breadcrumb::after {
+        content: "CSS By Ark#418921";
+        color: #FeEBE7;
+        position: absolute;
+        right: 13%; /* (This may need adjusting) */
+        z-index: 100
+    }
+
+@media only screen and (max-width: 1199px) and (min-width: 992px)  {
+        .breadcrumb::after {
+            right: 20%
+        }
+    }
+
+    @media only screen and (max-width: 991px) and (min-width: 768px)  {
+        .breadcrumb::after {
+            right: 20%
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .breadcrumb::after {
+            right: 22%
+        }
+    }
+
+/* BOOKMARK BUTTON */
+
+input.floatright, input.floatright:hover {
+	background: var(--pc2) !important;
+        border: 2px dotted var(--borderColor) !important;
+	border-radius: 10px;
+	color: #000000 !important;    
+}
+
+/* SWITCH ACCOUNT BUTTON */
+
+button.button, button.button:hover {
+	background: var(--pc2);
+        border: 2px dotted var(--borderColor) !important;
+	border-radius: 10px;
+        text-shadow: none !important;
+	color: var(--fc2) !important
+}
+
+/* ALERTS (ie. "Your lionesses have returned from hunting!") */
+
+.alert,
+.alert-warning,
+.alert-danger {
+	background:var(--redAlert) !important;
+	border: 2px dotted var(--borderColor);
+	color: var(--fc3);
+	border-radius: 10px !important
+}
+
+/* BIGGEST HEADER ("___"'s DEN) */
+
+h1 {
+	color: var(--fc2);
+	font-size: 90px;
+	text-align: center;
+        font-family: 'Hedvig Letters Serif', serif;
+'
+}
+
+
+/* MEDIUM HEADER */
+
+h2 {
+	color: var(--fc2);
+	font-size: 24px;
+	text-align: center
+}
+
+
+/* SMALL HEADER */
+
+h3 {
+	color: var(--fc2)!important;
+	font-size: 14px !important
+}
+
+/* RIGHT SIDE PANEL HEADER */
+
+.sidebar h3 {
+	color: var(--fc2) !important;
+        font-size: 26px !important;
+        font-family: 'Hedvig Letters Serif'
+}
+
+/* RIGHT SIDE PANELS */
+.panel {
+	background: var(--pc2) !important;
+	box-shadow: none !important;
+	border: 2px dotted var(--borderColor)!important;
+	color: var(--fc1) !important;
+	border-radius: 10px
+}
+
+/* ENERGY BAR BACKGROUND */
+.progress {
+	background: var(--pc3);
+	color: var(--fc1) !important;
+	border-radius: 10px !important
+}
+
+/* ENERGY BAR COLOR */
+.progress-bar {
+	background: var(--sc4);
+	color: var(--fc1) !important;
+	border-radius: 10px !important
+}
+
+/* ENERGY BAR TEXT */
+.progress div {
+	color: #FEEBE7 !important
+}
+
+/* CHAT */
+
+.s-chat-message:nth-child(even) /* Even Numbered Messages */ {
+	background: var(--pc3) !important;
+        color: #ffffff !important;
+	border: none !important
+}
+
+.s-chat-message:nth-child(odd) /* Odd Numbered Messages */ {
+	background: var(--sc1) !important;
+        color: #ffffff !important;
+	border: none !important
+}
+
+.s-chat-message__pinned /* Pinned Message */ {
+	background: var(--pc3) !important;
+        color: #ffffff !important;
+	border: none !important
+}
+
+.s-chat-message_timestamp /* Timestamps */ {
+	color: #ffffff !important;
+}
+
+div#chatMessageContainer {
+	border: none !important;
+}
+
+button#label_currentChannel /* Channel Button ie. Main, Sales */ {
+	background: var(--sc1) !important;
+        color: #ffffff !important;
+	border: none !important
+}
+
+/* LION INFO TABLE (Level, Stats, Territory Count, Etc.) */
+
+
+/* PANEL BACKGROUND COLOR */
+
+.table {
+	background: var(--pc2);
+	border: 2px dotted var(--borderColor) !important;
+	border-collapse: separate;
+	border-radius: 10px
+}
+
+
+/* HEADERS COLOR (King Name + Title, "There are _ lions with mutations in _'s pride.") */
+
+.top,
+.bottom,
+th {
+	background: var(--sc1) !important;
+	color: var(--fc2)  !important;
+	border-radius: 10px
+}
+
+td.bottom a {
+        text-decoration: none !important
+}
+
+/* Color behind "Level, Stats, Branch, Territory" etc. */
+
+.inner-table .left {
+	background: var(--sc1) !important;
+        color: var(--fc3) ;
+	border-radius:0px
+}
+
+
+/* Color behind the number of all of the things above */
+
+.inner-table .right {
+	background: none;
+	border-radius: 0px !important
+}
+
+td.right {
+	border-radius: 0px !important
+}
+
+/* IGNORE */
+.right_odd {
+	background: none !important
+}
+
+/* Affects the color behind "_ Unsorted", "_ Pregnant Lionesses", "View Pride Overview", and cave/mound names */
+
+.cave-grid,
+.mound-grid {
+	background: var(--sc1);
+	border: 2px dotted var(--borderColor) !important;
+        color: #ffffff   !important;
+	border-radius: 10px !important
+}
+
+/* FEED ALL, PLAY ALL */
+
+.feature {
+	background: var(--sc1) !important;
+	color: #ffe8e8 !important;
+	border: 2px dotted var(--borderColor) !important;
+	border-radius: 0px !important
+}
+
+/* "King Dynasty, Pride Dynasty, Achievements, Showcase" Panels */
+
+.feature,
+div.left {
+	background: var(--sc3);
+	border: 2px dotted var(--borderColor);
+	border-radius: 10px !important
+}
+
+/* Block of color behind "Territory Description, Player Name, Avatar URL" etc. */
+
+.table .left {
+	background: var(--sc1);
+        border-radius: 0px
+}
+
+/* Color behind the content of the elements listed above */
+
+input,
+select,
+textarea {
+	background: var(--sc1) !important;
+	border: 2px dotted var(--borderColor) !important;
+	border-radius: 0px !important;
+	color: #ffffff !important;
+	box-shadow: none !important;
+	text-shadow: none !important
+}
+
+/* ACCOUNT OPTIONS PANELS  (Friend Requests Toggles, etc.) */
+
+.item-header {
+	background: rgba(1, 1, 1, 0.5) !important;
+	color: #ffffff  !important;
+	border-radius: 0px !important;
+}
+
+.item {
+	background: rgba(1, 1, 1, 0.5) !important;
+	border: none !important;
+	border-radius: 0px !important
+}
+
+/* ACCOUNT OPTIONS ON/OFF TOGGLE SWITCH */
+
+div.slider.round /* Background */ {
+	background: #ffffff !important
+}
+
+div.slider.round::before /* Circle Part */ {
+	background: #000000 !important
+}
+
+/* Copyright, Terms of Service, CoC, etc. */
+
+div.container.footer.center.white.visible-lg.visible-md.visible-sm, div.container.footer.center.white.visible-lg.visible-md.visible-sm a {
+        color: #d6ecd7 !important;
+        text-shadow: none !important
+}
+
+/* LINK COLOR */
+
+a:link,
+a:visited {
+	color: var(--fc2) !important
+}
+
+/* LINK HOVER COLOR */
+
+a:hover {
+	color: #ffffff !important
+}
+
+
+/* BOX CONTAINER */
+
+.boxcontainer {
+	background: none;
+	height: auto;
+	padding: 0px;
+	justify-content: center;
+	display: flex
+}
+
+	.boxtopper {
+	padding: none;
+	float: left;
+	margin: -325px;
+	height: 30px;
+	width:600px;
+	position: relative;
+	z-index: 1;
+	margin-left: 130px;
+}
+
+/* BOXES */
+
+.smallbox {
+	float: left;
+	background: var(--pc3);
+	color: var(--pc2);
+	padding: 10px;
+	border: 2px dotted var(--borderColor);
+	border-radius: 10px;
+	margin: 10px;
+	height: 150px;
+	width: 28.4%;
+	overflow: auto
+}
+
+.mediumbox {
+	float: left;
+	background: var(--pc3);
+	color: var(--pc2);
+	padding: 10px;
+	border: 2px dotted var(--borderColor);
+	border-radius: 10px;
+	margin: 10px;
+	height: 250px;
+	width: 43.8%;
+	overflow: auto
+}
+
+.largebox {
+	float: left;
+	background: var(--pc3);
+	color: var(--pc2);
+	padding: 10px;
+	border: 2px dotted var(--borderColor);
+	border-radius: 10px;
+	margin: 10px;
+	height: 280px;
+	width: 90%;
+	overflow: auto
+}
+
+
+/* HOVER BOXES */
+
+.smallhoverbox {
+	float: left;
+	background: var(--pc2);
+	color: var(--fc2);
+	padding: 10px;
+	border: 2px dotted var(--borderColor);
+	border-radius: 10px;
+	margin: 10px;
+	height: 200px;
+	width: 40%;
+	overflow: auto;
+        transition: 3s
+}
+
+.smallhoverbox:hover {
+	height: 150px;
+	width: 28.4%;
+}
+
+.mediumhoverbox {
+	float: left;
+	background: var(--pc2);
+	color: var(--fc2);
+	padding: 5px;
+	border: 2px dotted var(--borderColor);
+	border-radius: 10px;
+	margin: 10px;
+	height: 200px;
+	width: 47.6%;
+	overflow: auto;
+        transition: 3s
+}
+
+.mediumhoverbox:hover {
+	height: 150px;
+	width: 43.8%;
+}
+
+.largehoverbox {
+	float: left;
+	background: var(--pc2);
+	color: var(--fc3);
+	padding: 1px;
+	border:  2px dotted var(--borderColor);
+	border-radius: 10px;
+	margin: 0px;
+	height: 280px;
+	width: 100%;
+	overflow: auto;
+        transition: 3s
+}
+
+.largehoverbox:hover {
+	height: 400px;
+	width: 100%;
+}
+
+/* SCROLL BAR */
+
+/* WIDTH */
+
+::-webkit-scrollbar {
+	width: 10px
+}
+
+
+/* BACKGROUND */
+
+::-webkit-scrollbar-track {
+	background: var(--pc2)
+}
+
+
+/* "THUMB" */
+
+::-webkit-scrollbar-thumb {
+	background: var(--fc3);
+	border-radius: 10px
+}
+
+
+/* LION AND USER AVATAR OPACITY */
+
+div#lion_image {
+	opacity: 1
+}
+
+table#player img {
+	opacity: 1
+}
+
+
+/*Lion and User Avatar Ocapacity*/
+div#lion_image {
+    opacity: 0.8;
+}
+table#player img {
+    opacity: 1;
+}
+/*Rounding of Avatars*/
+div#lion_image {
+    border: 2px dotted var(--borderColor);border-radius: 10% !important;overflow: hidden;margin-top: 15px;margin-left: 12px;
+}
+table#player img {
+    border-radius: 0% !important;
+    overflow: hidden;
+}
+
+
+/* LIODEN LOGO REPLACER */
+
+div.container.main>div:nth-child(1)>nav>div.navbar-header>a>img {
+	content: url(https://i.imgur.com/qd9T8py.gif)
+}
+
+/* CAVE / MOUND IMAGES */
+
+div.cave-grid>img /* Pregnant Lionesses */ {
+	content: url('https://i.imgur.com/dbi7H8w.png') !important
+}
+
+a[href$="412195"]>div.cave-grid>img {
+	content: url('https://i.imgur.com/R2n789R.jpeg') !important
+}
+
+a[href$="389615"]>div.cave-grid>img {
+	content: url('https://i.imgur.com/R2n789R.jpeg') !important
+}
+
+a[href$="359646"]>div.cave-grid>img {
+	content: url('https://i.imgur.com/R2n789R.jpeg') !important
+}
+
+a[href$="lionoverview.php?id=PLAYER ID"]>div.cave-grid>img /* Pride Overview */ {
+	content: url(https://i.imgur.com/0xN0rhC.jpeg) !important
+}
+
+a[href$="unsorted.php?id=PLAYER ID"]>div.cave-grid>img /* Unsorted */ {
+	content: url('https://i.imgur.com/0xN0rhC.jpeg') !important
+}
+
+.mound-grid img /* Mound(s) */ {
+	background: url(https://www.lioden.com/images/items/Other/fuschiaflower.png);
+	width: 0;
+	height: 0;
+	padding-top: 100px;
+	padding-right: 100px
+}
+
+/* MAKES BOXES/DESCRIPTION SHOW ON MOBILE */
+
+@media only screen and (max-width: 767px) {
+        .container.main .hidden-xs {
+            display: block !important;
+        }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+	display: block !important;
+}
+
+@media only screen and (min-width: 1200px) {
+		div.quote {
+			width: 790px;
+		}
+	}
+
+
+
+
+/* MEMBER ONLINE */
+ 
+.member-online {
+    background: rgba(255, 199, 204);
+ 
+}
+
+/* FEATURED LION BACKGROUND */
+.lionImage>div>img:first-child {
+content: url('https://i.postimg.cc/FK1ZTVvV/snowymountaintop.png')!important;
+}
+
+/*TIME/SEASONS*/
+/*Day*/
+img[src$="day.png"] {
+    content: url('https://pixels.crd.co/assets/images/gallery30/9eb8efc6.gif?v=29416114')!important;width: 20px!important;
+}
+/*Night*/
+img[src$="night.png"] {
+    content: url('https://pixels.crd.co/assets/images/gallery152/973f608a.gif?v=29416114')!important;width: 20px!important;
+}
+/*Dry*/
+img[src$="dry.png"] {
+    content: url('https://pixels.crd.co/assets/images/gallery10/e81276d4.gif?v=29416114')!important;width: 20px!important;
+}
+/*Wet*/
+img[src$="wet.png"] {
+    content: url('https://pixels.crd.co/assets/images/gallery62/900d9e0c.gif?v=29416114')!important;width: 20px!important;
+}
+
+/*Gold Beetle*/
+img[src$="gold.png"] {
+    content: url('https://pixels.crd.co/assets/images/gallery10/69db8a45.gif?v=29416114')!important;width: 20px!important;
+}
+/*Silver Beetle*/
+img[src$="silver.png"] {
+    content: url('https://pixels.crd.co/assets/images/gallery21/3b4dfeda.gif?v=29416114')!important;width: 20px!important;
+}
+
+div.picture1 {
+   width:476px; 
+   height:253px; 
+   background-image:url('https://i.ibb.co/9k2DYkGP/transparent-blank-by-madhatter2408-d4y5rky.png');
+   margin: 0; 
+   padding 0; 
+}
+
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/nature/nat-1/nat59.cur), auto !important;} /* End https://www.cursors-4u.com */
+
+
